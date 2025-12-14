@@ -23,10 +23,10 @@ It provides real-time weather information with a clean and responsive UI.
 [https://YOUR-NETLIFY-LINK.netlify.app](https://skypulse-web.netlify.app/)
 
 ## 📂 Project Structure
-index.html
-style.css
-app.js
-images/
+- index.html
+- style.css
+- app.js
+- images/
 
 ## 📌 How to Run Locally
 1. Download or clone this repository
