@@ -20,7 +20,7 @@ It provides real-time weather information with a clean and responsive UI.
 - Open-Meteo API
 
 ## 🌍 Live Demo
-https://YOUR-NETLIFY-LINK.netlify.app
+[https://YOUR-NETLIFY-LINK.netlify.app](https://skypulse-web.netlify.app/)
 
 ## 📂 Project Structure
 index.html
