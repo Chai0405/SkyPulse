@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyPulse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Search -->
+    <header class="header">
+  <h1>SkyPulse</h1>
+  <p>Your Modern Weather Companion</p>
+  <button class="theme-btn">🌙</button>
+
+  <form class="search-form">
+    <input type="text" class="search-input" placeholder="Search for a city..." required>
+    <button type="submit" class="search-button">Search</button>
+  </form>
+
+  <button class="location-btn">📍 Use My Location</button>
+
+  <!-- 👇 Suggestions should be HERE -->
+  <ul class="suggestions"></ul>
+</header>
+
+    <!-- Dashboard -->
+    <main class="dashboard">
+
+      <!-- CURRENT WEATHER -->
+      <section class="current-card">
+        <div class="city-header">
+        <h2 class="city-name">San Francisco</h2>
+        <button class="fav-btn">⭐</button>
+        </div>
+        <p class="city-region">Wednesday, December 6</p>
+        <p class="last-updated">Updated just now</p>
+
+        <img class="weather-icon" src="images/cloudy.png" alt="">
+        <div class="temp-row">
+          <span class="temperature-display">22°</span>
+          <div class="unit-toggle">
+            <button class="unit-btn active" data-unit="metric">°C</button>
+            <button class="unit-btn" data-unit="imperial">°F</button>
+          </div>
+        </div>
+
+        <p class="condition">Cloudy</p>
+        <p class="temp-extra">Feels like 24° — H: 26° / L: 18°</p>
+
+        <div class="weather-details">
+          <p>Humidity: <span class="humidity">65%</span></p>
+          <p>Wind: <span class="wind">12 km/h</span> <span class="wind-dir"></span></p>
+          <p>Pressure: <span class="pressure">1015 hPa</span></p>
+          <p>Sunrise: <span class="sunrise">6:28 AM</span></p>
+          <p>Sunset: <span class="sunset">5:54 PM</span></p>
+        </div>
+      </section>
+
+      <!-- FORECAST + AQI -->
+      <section class="forecast-card">
+        <h3>5-Day Forecast</h3>
+        <div class="forecast-list"></div>
+        <p id="aqiRow" class="aqi-row">AQI Loading…</p>
+        <p id="uvRow"></p>
+        <p id="rainRow"></p>
+      </section>
+    </main>
+
+    <!-- HOURLY FORECAST -->
+    <section class="hourly-card">
+      <h3>Today • Hourly Forecast</h3>
+      <div class="hourly-list"></div>
+    </section>
+
+    <!-- WEATHER TIPS -->
+    <section class="tips-card">
+      <p>🌤 Pleasant weather — great for outdoor activities!</p>
+    </section>
+
+    <!-- SEARCH HISTORY -->
+    <section class="search-history">
+      <div class="search-history-header">
+    <h3>Recent Searches</h3>
+    <button class="clear-history">Clear</button>
+  </div>
+      <ul class="history-list"></ul>
+    </section>
+  </div>
+
+  <!-- ERROR POPUP -->
+  <div class="error-box" id="errorBox">
+    <div class="error-icon">⚠️</div>
+    <h3>City Not Found</h3>
+    <p>Please try another location</p>
+    <button class="retry-btn">Retry</button>
+  </div>
+
+  <!-- LOADER -->
+  <div class="loading-spinner" id="loadingSpinner">
+    <div class="spinner"></div>
+    <p>Fetching weather data...</p>
+  </div>
+
+  <div class="offline-msg" id="offlineMsg">⚠️ You are offline</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
