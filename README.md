@@ -28,9 +28,6 @@ style.css
 app.js
 images/
 
-markdown
-Copy code
-
 ## 📌 How to Run Locally
 1. Download or clone this repository
 2. Open `index.html` in your browser
